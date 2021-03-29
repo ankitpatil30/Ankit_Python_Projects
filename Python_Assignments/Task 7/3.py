@@ -4,20 +4,21 @@
 # Input array:[-25,-10,-7,-3,2,4,8,10]
 # Expected output:[[-10,2,8],[-7,-3,10]]
 
-def sumofthree(arr):
-    zero = []
-    for i in arr:
-        for j in arr:
-            for k in arr:
-                if (i+j+k) == 0:
-                    b = [i,j,k]
-                    b.sort()
-                    if b not in zero:
-                        zero.append(b)
-    print(zero)
+class zerosum:
+    def sumofthree(self, arr):
+        zero = []
+        for i in arr:
+            for j in arr:
+                for k in arr:
+                    if (i+j+k) == 0:
+                        b = [i,j,k]
+                        b.sort()
+                        if b not in zero:
+                            zero.append(b)
+        print(zero)
 
 x= [-25,-10,-7,-3,2,4,8,10,5,7,-5]
-sumofthree(x)
+zerosum().sumofthree(x)
 
 
 # import itertools
